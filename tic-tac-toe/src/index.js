@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Field from './components/field/field.js';
+import Intro from './components/intro/intro.jsx';
 
-ReactDOM.render(<Field />, document.getElementById('root'));
+ReactDOM.render(<Intro />, document.getElementById('root'));
