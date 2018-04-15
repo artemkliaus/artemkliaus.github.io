@@ -4,22 +4,23 @@ import Field from '../field/field.js';
 class Intro extends Component {
 
     render () {
-        let choose;
+        let choice = this.showIntoPopup();
 
         return (
             <div>
-                    {this.showIntoPopup(choose)}
-                    <Field val={choose} />
+                    <Field val={choice} />
             </div>
         );
     }
 
-    showIntoPopup (choose) {
-
+    showIntoPopup () {
+        let choice;
         do {
-            choose = prompt('Zero or cross?', 'zero');
-        } while (choose != "zero" && choose != "cross");
-        console.log(choose);
+            choice = prompt('Zero or cross?', 'zero');
+        } while (choice !== "zero" && choice !== "cross");
+        console.log(choice);
+
+        return (choice === 'zero') ? 'O' : 'X';
     }
 }
 
